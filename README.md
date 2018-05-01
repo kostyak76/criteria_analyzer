@@ -9,7 +9,7 @@ This script uses approach of comparing two criteria at a time. After all criteri
 
     from criteria_analyzer import Analyzer
     criterias = ['a', 'b', 'c']
-    Analyzer.from_criterias(cases).print_matrix()
+    Analyzer.from_criterias(criterias).print_matrix()
     
 this will produce result like this:
     

@@ -5,7 +5,7 @@ class Analyzer(object):
     uses:
         from criteria_analyzer import Analyzer
         criterias = ['a', 'b', 'c']
-        Analyzer.from_criterias(cases).print_matrix()
+        Analyzer.from_criterias(criterias).print_matrix()
     """
     def __init__(self, criterias, pair_factory, rater):
         """
@@ -73,8 +73,7 @@ class PairGenerator(object):
         k = len(self._elements)
         for i in range(pow(2, k) - 1):
             # get all possible combinations
-            may_be_pair = self._get_elements_by_bin_map(
-                self._get_bin_map_of_number(i, len(self._elements)))
+            may_be_pair = self._get_elements_by_bin_map(self._get_bin_map_of_number(i, k))
             if len(may_be_pair) == 2:
                 yield may_be_pair
 
